@@ -34,6 +34,11 @@ html {
   color: rgb(226, 226, 226);
 }
 
+.menu p.right:hover {
+  color: #207aa9;
+  cursor: pointer;
+}
+
 .left {
   float: left;
   margin-left: 190px;
@@ -44,6 +49,11 @@ html {
 p.left {
   font-size: 16px;
   margin-top: -5px;
+}
+
+p.left:hover {
+  cursor: pointer;
+  color: #207aa9;
 }
 
 .right {
@@ -73,7 +83,8 @@ h1 {
 }
 
 button {
-  background-color: rgb(10, 148, 212);
+  text-transform: uppercase;
+  background-color: #2899d4;
   border-radius: 3px;
   color: white;
   padding: 17px 40px;
@@ -81,6 +92,11 @@ button {
   font-size: 15px;
   font-weight: bold;
   border: none;
+}
+
+button:hover {
+  background-color: #207aa9;
+  cursor: pointer;
 }
 
 .below {
@@ -99,11 +115,13 @@ button {
 /* Formatting for the grey area */
 
 .grey-area {
-  background-color: rgb(240, 239, 239);
+  background-color: #eee;
   text-align: center;
 }
 
 h2 {
+  color: #333;
+  text-transform: uppercase;
   font-weight: 510;
   font-size: 30px;
   padding-top: 60px;
@@ -114,7 +132,7 @@ h2 {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
   padding: 18px 335px 80px 335px;
-  color: rgb(150, 149, 149);
+  color:#777;
 }
 
 /* Formatting for the phone image area */
@@ -153,12 +171,17 @@ h2 {
 .column.third .content {
   margin-top: 10px;
   font-family: 'Roboto Slab';
-  color: rgb(165, 165, 165);
+  color: #777;
   font-size: 12px;
   line-height: 20px;
 }
 
 /* THIS IS FOR THE BOTTOM GREY AREA */
+.phone-area2 {
+  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+}
 
 .bottom-grey {
   background-color: rgb(240, 239, 239);
@@ -175,6 +198,7 @@ h2 {
   margin-top: 30px;
   font-size: 11px;
   padding-left: 135px;
+  margin-bottom: 12px;
 }
 .bottom-page footer, .bottom-page a{
   display: inline;
@@ -183,6 +207,7 @@ h2 {
 .bottom-page a {
   float: right;
   margin: 0 8px;
+  text-decoration: none;
 }
 
 .bottom-page footer {
@@ -191,8 +216,5 @@ h2 {
 
 .bottom-page img {
   height: 30px;
-}
-
-.logos {
-
+  margin-top: -10px;
 }
