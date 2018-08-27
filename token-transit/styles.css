@@ -38,7 +38,9 @@ html {
   section {
    background-color: rgb(94, 94, 94);
    height: 60px;
-   opacity: 0.8
+   opacity: 0.8;
+   position: fixed;
+   width: 100%
   }
 }
 
