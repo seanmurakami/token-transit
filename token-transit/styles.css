@@ -7,15 +7,21 @@ html {
 * ::before,
 * ::after {
   box-sizing: inherit;
-  margin:0;
+  margin: 0;
   padding: 0;
 }
 
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* FORMATTING FOR THE UPPER MENU */
+
 .upper-screen {
   background-image: url("header-bg.jpg");
   background-size: cover;
-  background-position: 0px;
+  background-position: center center;
   height: 600px;
   color: white;
 }
@@ -25,9 +31,17 @@ html {
 }
 
 .menu p {
-  display: inline;
+  display: none;
   font-size: 12px;
   padding-left: 10px;
+}
+
+@media screen and (min-width: 920px) {
+  .menu p {
+    display: inline;
+    /* font-size: 12px;
+    padding-left: 10px; */
+  }
 }
 
 .menu p.right {
@@ -67,7 +81,7 @@ p.left:hover {
   padding-top: 170px;
 }
 
-p.top{
+p.top {
   font-family: 'Droid Serif', serif;
   font-weight: 400;
   line-height: 25px;
@@ -79,7 +93,7 @@ p.top{
 
 h1 {
   font-size: 57px;
-  margin-top:0;
+  margin-top: 0;
 }
 
 button {
@@ -87,11 +101,25 @@ button {
   background-color: #2899d4;
   border-radius: 3px;
   color: white;
-  padding: 17px 40px;
+  padding: 25px 48px;
   margin-top: 30px;
-  font-size: 15px;
+  font-size: 22px;
   font-weight: bold;
   border: none;
+}
+
+@media screen and (min-width: 920px) {
+  button {
+    /* text-transform: uppercase;
+    background-color: #2899d4; */
+    /* border-radius: 3px; */
+    /* color: white; */
+    padding: 17px 40px;
+    /* margin-top: 30px; */
+    font-size: 15px;
+    /* font-weight: bold; */
+    /* border: none; */
+  }
 }
 
 button:hover {
@@ -123,24 +151,51 @@ h2 {
   color: #333;
   text-transform: uppercase;
   font-weight: 510;
-  font-size: 30px;
-  padding-top: 60px;
+  font-size: 38px;
   text-align: center;
+  padding: 60px 12px 10px 12px;
+}
+
+@media screen and (min-width: 920px) {
+  h2 {
+    /* color: #333;
+    text-transform: uppercase;
+    font-weight: 510; */
+    font-size: 30px;
+    /* text-align: center; */
+    padding-top: 60px;
+  }
 }
 
 .grey-area p {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
-  padding: 18px 335px 80px 335px;
-  color:#777;
+  color: #777;
+  padding: 18px 10px 65px 10px;
+}
+
+@media screen and (min-width: 920px) {
+  .grey-area p {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    padding: 18px 335px 80px 335px;
+    color: #777;
+  }
 }
 
 /* Formatting for the phone image area */
+
 .phone-area {
   text-align: center;
-  width: 1000px;
+  /* width: 1000px; */
   margin: 0 auto;
   padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1000px) {
+  .phone-area {
+    width: 1000px;
+  }
 }
 
 .phone-columns {
@@ -153,9 +208,18 @@ h2 {
 }
 
 .column.third {
-  width: calc(100%/3);
+  display: block;
+  width: 100%;
   margin-top: 28px;
   font-size: 12px;
+}
+
+@media screen and (min-width: 720px) {
+  .column.third {
+    width: calc(100%/3);
+    margin-top: 28px;
+    font-size: 12px;
+  }
 }
 
 .main {
@@ -164,8 +228,15 @@ h2 {
 }
 
 .column.third img {
-  width: 80%;
+  width: 60%;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 720px) {
+  .column.third img {
+    width: 80%;
+    margin-top: 0px;
+  }
 }
 
 .column.third .content {
@@ -174,13 +245,23 @@ h2 {
   color: #777;
   font-size: 12px;
   line-height: 20px;
+  font-weight: 300;
 }
 
 /* THIS IS FOR THE BOTTOM GREY AREA */
+
 .phone-area2 {
   text-align: center;
-  width: 1000px;
+  /* width: 1000px; */
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+  .phone-area2 {
+    text-align: center;
+    width: 1000px;
+    margin: 0 auto;
+  }
 }
 
 .bottom-grey {
@@ -194,27 +275,27 @@ h2 {
 
 /* THIS IS THE BOTTOM OF THE PAGE */
 
-.bottom-page {
-  margin-top: 30px;
-  font-size: 11px;
-  padding-left: 135px;
-  margin-bottom: 12px;
-}
-.bottom-page footer, .bottom-page a{
+.column.third .bottom-image {
   display: inline;
-}
-
-.bottom-page a {
-  float: right;
-  margin: 0 8px;
-  text-decoration: none;
-}
-
-.bottom-page footer {
-  float: left;
-}
-
-.bottom-page img {
   height: 30px;
-  margin-top: -10px;
+  width: 30px;
+}
+
+.column.third .bottom-links {
+  padding-bottom: 25px;
+}
+
+.column.third .bottom-image {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .column.third .bottom-links {
+    padding-bottom: 0;
+  }
+}
+
+.column.third .bottom-links a {
+  text-decoration: none;
+  margin: 0 0.5rem;
 }
